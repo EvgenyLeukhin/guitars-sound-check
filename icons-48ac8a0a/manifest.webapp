@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "guitars-sound-check",
+  "description": "Webpack config for React SPA project",
+  "icons": {
+    "60": "icons-48ac8a0a/firefox_app_60x60.png",
+    "128": "icons-48ac8a0a/firefox_app_128x128.png",
+    "512": "icons-48ac8a0a/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "EvgenyLeukhin",
+    "url": null
+  }
+}
