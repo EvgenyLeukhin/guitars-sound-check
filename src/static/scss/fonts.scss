@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PTSans'), local('PT_Sans'), local('PT-Sans'),
+       url('../fonts/PTSans/400/PTSansRegular.woff2') format('woff2'),
+       url('../fonts/PTSans/400/PTSansRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PTSans'), local('PT_Sans'), local('PT-Sans'),
+       url('../fonts/PTSans/700/PTSansBold.woff2') format('woff2'),
+       url('../fonts/PTSans/700/PTSansBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+       url('../fonts/Montserrat/400/Montserrat-Regular.ttf') format('truetype'),
+       url('../fonts/Montserrat/400/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+       url('../fonts/Montserrat/700/Montserrat-Bold.ttf') format('truetype'),
+       url('../fonts/Montserrat/700/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+

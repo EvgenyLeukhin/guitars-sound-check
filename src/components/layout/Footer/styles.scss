@@ -1,0 +1,16 @@
+.page-footer {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  border: 1px solid #ccc;
+  margin-top: auto;
+
+  h4 {
+    padding-left: 10px;
+  }
+
+  img {
+    max-width: 50px;
+    height: auto;
+  }
+}
