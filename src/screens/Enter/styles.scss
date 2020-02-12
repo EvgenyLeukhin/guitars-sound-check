@@ -1,0 +1,94 @@
+@keyframes shifting-left {
+  0% { left: 0; }
+  100% { left: -1000px; }
+}
+
+@keyframes shifting-right {
+  0% { right: 0; }
+  100% { right: -1000px; }
+}
+
+@keyframes growing-and-hiding {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+
+.enter-screen {
+  display: flex;
+  flex-grow: 1;
+  background: #1e272e;
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 100px;
+    margin-left: -250px;
+    margin-top: -50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__text {
+      transition: all 0.33s;
+      transform: perspective(2.5em) rotateX(15deg) scaleY(0.8);
+      text-transform: uppercase;
+      color: #ccc;
+      font-size: 75px;
+      line-height: 1;
+      text-shadow:
+        0 -1px 15px rgba(0, 0, 0, 0.9),
+        0 1px 0 #7f6303,
+        0 3px 0 #846703,
+        0 5px 0 #896b03,
+        0 7px 0 #8e6f03,
+        0 9px 0 #937203,
+        0 6px 50px rgba(252, 223, 92, 0.8);
+
+        &.launch, &:hover {
+          color: #fff;
+          cursor: pointer;
+          transform: perspective(8em) rotateX(11deg) scale(1.2);
+          text-shadow:
+            0 -1px 15px black,
+            0 1px 0 #7f6303,
+            0 2px 0 #846703,
+            0 0px 0 #896b03,
+            0 1px 0 #8e6f03,
+            0 2px 0 #937203,
+            0 2px 30px rgba(252, 223, 92, 0.6);
+          }
+
+          &.launch { animation: growing-and-hiding .5s linear .25s 1 forwards; }
+        }
+    }
+}
+
+.door {
+  flex-basis: 50%;
+  position: relative;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-timing-function: linear;
+
+  &.left-door {
+    background: red;
+
+    &.launch { animation: shifting-left 1s linear .5s forwards; }
+  }
+
+  &.right-door {
+    background: green;
+
+    &.launch { animation: shifting-right 1s linear .5s forwards; }
+  }
+}

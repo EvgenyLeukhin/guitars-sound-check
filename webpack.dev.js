@@ -40,6 +40,8 @@ module.exports = {
       Images: path.resolve(__dirname, 'src', 'static/img'),
       Styles: path.resolve(__dirname, 'src', 'static/scss'),
       Fonts:  path.resolve(__dirname, 'src', 'static/fonts'),
+      Mp3:    path.resolve(__dirname, 'src', 'static/mp3'),
+      Sounds: path.resolve(__dirname, 'src', 'sounds'),
     }
   },
 
@@ -76,7 +78,7 @@ module.exports = {
 
       // FONTS //
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
+        test: /\.(eot|ttf|mp3|woff|woff2)$/,
         use: [
           {
             loader: 'file-loader',

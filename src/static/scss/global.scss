@@ -2,32 +2,11 @@
 @import "fonts";
 @import "vars";
 
-$color: #333;
-
-html, body {
-  height: 100%;
-  font-family: 'Montserrat';
-}
-
-body {
-  margin: 0;
-  color: $color;
-}
+html, body, #app { height: 100%; }
 
 #app {
-  height: 100%;
-}
-
-.app-container {
   position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-main {
-  margin-left: 180px;
-  background: pink;
-  flex-grow: 1;
-  border: 1px solid #aaa;
+  overflow: hidden;
 }

@@ -1,18 +1,32 @@
 import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
 
-import Routes from './../routes';
-import Layout from './layout';
+import EnterScreen from '../screens/Enter';
+import MainScreen  from '../screens/Main';
 
+import { beep } from 'Sounds/beep';
 
 class App extends React.Component {
+  state = {
+    launch: false,
+    screen: 'enter'
+  }
+
+  onLogoClick = () => {
+    beep.play();
+    this.setState({ launch: true });
+    setTimeout(() => {
+      // this.setState({ screen: 'main' });
+    }, 2000);
+  }
+
   render() {
+    const { screen, launch } = this.state;
+
     return (
-      <Router>
-        <Layout>
-          <Routes />
-        </Layout>
-      </Router>
+      <>
+        { screen === 'enter' && <EnterScreen launch={launch} onLogoClick={this.onLogoClick} /> }
+        { screen === 'main'  && <MainScreen /> }
+      </>
     );
   }
 }
