@@ -15,7 +15,7 @@ class App extends React.Component {
     beep.play();
     this.setState({ launch: true });
     setTimeout(() => {
-      // this.setState({ screen: 'main' });
+      this.setState({ screen: 'main' });
     }, 2000);
   }
 
